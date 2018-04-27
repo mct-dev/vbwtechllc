@@ -1,0 +1,94 @@
+---
+---
+@import "colors";
+$small: 850px;
+
+.bg {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: url('../img/typing.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    @media screen and (max-width: $small) {
+        height: 110vh;
+
+    }
+}
+.index-box {
+    background: rgba(255, 255, 255, 0.815);
+    box-shadow: 0 2px 10px 1px #4b4b4b;
+    padding: 5em 20px 5em 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    @media screen and (max-width: $small) {
+        padding: 3em 20px;
+        width: 95%;
+    }
+    a {
+        color: lighten($blue, 30);
+        &:hover {
+            color: $blue;
+            text-decoration: none;
+        }
+    }
+    h1 {
+        color: $black;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2em;
+        @media screen and (max-width: $small) {
+            font-size: 2em;
+            margin: 0 0 1em 0;
+        }
+    }
+    .blurb {
+        text-align: center;
+        width: 100%;
+        p {
+            font-size: 1.3em;
+            width: 100%;
+        }
+    }
+}
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2em;
+    a {
+        font-size: 1.5em;
+        background: $blue;
+        color: $white;
+        cursor: pointer;
+        border: none;
+        padding: 7px 10px 0 10px;
+        text-align: center;
+        width: 250px;
+        margin: 0 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px 1px #181818;
+        transition: all .2s ease-in-out;
+        @media screen and (max-width: $small) {
+            margin: 20px;
+        }
+        &:hover {
+            text-decoration: none;
+            background: lighten($blue, 20);
+            box-shadow: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+}

@@ -1,0 +1,78 @@
+---
+---
+@import 'colors';
+
+.header {
+    width: 100%;
+    padding-left: 5em;
+    margin: 0 0 5em 0;
+    @media screen and (max-width: $small) {
+        padding: 20px;
+        margin-bottom: 1em;
+    }
+
+    h1 {
+        color: $red;
+        font-size: 3em;
+        width: 40%;
+        border-bottom: 2px solid $black;
+        @media screen and (max-width: $small) {
+            font-size: 2em;
+            width: 80vw;
+        }
+    }
+}
+
+.contact-blurb {
+    padding: 0 7em;
+    @media screen and (max-width: $small) {
+        padding: 0 20px;
+    }
+    p {
+        font-size: 1.7em;
+        margin: 40px 0;
+        @media screen and (max-width: $small) {
+            font-size: 1em;
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+}
+.contact-info {
+    margin: 0 8em;
+    padding-left: 20px;
+    @media screen and (max-width: $small) {
+        margin: 0;
+    }
+
+    .contact-row {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        @media screen and (max-width: $small) {
+            padding: 10px;
+        }
+    }
+    .burgundy {
+        color: $burgundy;
+    }
+
+    i {
+        font-size: 2em;
+        margin-top: -28px;
+        padding: 10px 30px 10px 10px;
+        @media screen and (max-width: $small) {
+            font-size: 1.2em;
+        }
+    }
+
+    p {
+        font-size: 1.7em;
+        @media screen and (max-width: $small) {
+            font-size: 1.2em;
+        }
+    }
+    a {
+        color: lighten($blue, 30);
+    }
+}

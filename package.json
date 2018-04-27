@@ -1,0 +1,18 @@
+{
+  "name": "vbw",
+  "version": "1.0.0",
+  "description": "VBW Consulting website.",
+  "main": "_site/index.html",
+  "scripts": {
+    "start": "bundle exec jekyll serve --livereload",
+    "build": "bundle exec jekyll build",
+    "deploy": "surge _site --domain vbwtechllc.com",
+    "teardown": "surge teardown vbw.surge.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mike Tobias",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

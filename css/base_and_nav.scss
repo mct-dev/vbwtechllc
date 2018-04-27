@@ -1,0 +1,147 @@
+---
+---
+// above triple dashes are required for jekyll to compile sass
+
+@import 'colors';
+$small: 850px;
+
+html, body {
+    font-family: 'Tajawal', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a {
+    color: $blue;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.all-content {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    .left-col {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 20vw;
+        height: 100vh;
+        float: left;
+        transition: all .3s ease-in-out;
+        @media screen and (max-width: $small) {
+            margin-left: -100vw;
+            width: 100vw;
+        }
+        &.show {
+            margin: 0;
+        }
+        .nav {
+            height: 100%;
+            background-color: rgb(51, 51, 51);
+            display: flex;
+            align-items: center;
+            color: white;
+            transition: all .5s ease-in-out;
+            .nav-content {
+                display: flex;
+                width: 100%;
+                flex-wrap: wrap;
+                margin-top: -80%;
+                @media screen and (max-width: $small) {
+                    margin-top: -40%;
+                }
+                .logo {
+                    margin-bottom: 6em;
+                    @media screen and (max-width: $small) {
+                        margin-top: 5em;
+                        margin-bottom: 2em;
+                    }
+
+                    img {
+                        width: 90%;
+                        margin-left: 5%;
+                    }
+                }
+
+                ul {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
+                    list-style: none;
+                    a {
+                        color: white;
+                        transition: color .2s ease-in-out;
+                        font-size: 1.2em;
+                        margin: 30px 0;
+                        text-align: center;
+                        cursor: pointer;
+                        &:hover {
+                            color: lighten($blue, 25);
+                        }
+                        li {
+                            padding: 15px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .right-col {
+        position: absolute;
+        width: 80%;
+        z-index: 0;
+        left: 20%;
+        top: 0;
+        height: 100%;
+        padding: 80px 10px 0px 10px;
+        @media screen and (max-width: $small) {
+            width: 100%;
+            left: 0;
+        }
+        .content {
+        }
+    }
+    .nav-icon {
+        z-index: 5;
+        position: fixed;
+        top: 30px;
+        left: 40px;
+        display: none;
+        @media screen and (max-width: $small) {
+            display: block;
+        }
+        .burger {
+            transform: translateY(-50%) translateX(-50%);
+        }
+        .line {
+            background: $black;
+            width: 40px;
+            height: 6px;
+            border-radius: 4px;
+            margin: 8px 0;
+            transform-origin: right;
+            transition: 400ms cubic-bezier(.17,.67,.35,1.15);
+        }
+    }
+    .nav-icon.active {
+        .burger {
+            .line {
+                background: $red;
+            }
+            .line_1 {
+                margin-left: -6px;
+                transform: rotate(-45deg);
+            }
+            .line_2 {
+                opacity: 0;
+                transform: translateX(-5px);
+            }
+            .line_3 {
+                margin-left: -6px;
+                transform: rotate(-315deg);
+            }
+        }
+    }
+}
